@@ -1,22 +1,30 @@
-totalTime = 2000;
-x1 = 200;
-y1 = 200;
-r1 = 100;
-speedX1 = 2;
-speedY1 = 2;
-x2 = 500;
-y2 = 300;
-r2 = 100;
-speedX2 = -2;
-speedY2 = -4;
+let totalTime = 2000;
+let x1 = 300;
+let y1 = 300;
+let r1;
+let speedX1 = 2;
+let speedY1 = 2;
+let x2 = 500;
+let y2 = 300;
+let r2 = 100;
+let speedX2 = -2;
+let speedY2 = -4;
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(
+    windowWidth - (windowWidth * 0.4) / 100,
+    windowHeight - (windowHeight * 0.4) / 100
+  );
+
   savedTime = millis();
   background(random(155, 255), random(155, 255), random(155, 255));
 }
 
 function draw() {
+
+  r1 = width / 6;
+  r2 = width / 6;
+
   passedTime = millis() - savedTime;
   if (passedTime > totalTime) {
     background(random(155, 255), random(155, 255), random(155, 255));
@@ -51,4 +59,12 @@ function draw() {
   noStroke();
   ellipse(x1, y1, 2 * r1, 2 * r1);
   ellipse(x2, y2, 2 * r2, 2 * r2);
+}
+
+
+function windowResized() {
+  resizeCanvas(
+    windowWidth - (windowWidth * 0.4) / 100,
+    windowHeight - (windowHeight * 0.4) / 100
+  );
 }
