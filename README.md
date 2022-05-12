@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/intersecting-circles.gif">
+  <img src="./assets/intersecting-circles.gif" width="300px">
   <h1>Intersecting Circles</h1>
   
   <h3>Colorful explosions occur when two circles are interescting.</h3>
