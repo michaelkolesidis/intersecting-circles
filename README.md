@@ -28,13 +28,17 @@
 
 ## Description
 
-<p>Two circles move with random speeds and change colors when intersecting. THe backround is rfreshed every few seconds.</p>
+<p>Two circles move with random speeds and change colors when intersecting. THe backround is refreshed every few seconds.</p>
 
 
 
 ## Screenshots
 
-<img src="">
+<img src="./assets/screenshot-01.png" width="600px">
+<img src="./assets/screenshot-02.png" width="600px">
+<img src="./assets/screenshot-03.png" width="600px">
+<img src="./assets/screenshot-04.png" width="600px">
+<img src="./assets/screenshot-05.png" width="600px">
 
 
 
