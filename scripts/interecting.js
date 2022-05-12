@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2022 Michael Kolesidis
+ * MIT License
+ * 
+ */
+
 let totalTime = 2000;
 let x1 = 300;
 let y1 = 300;
