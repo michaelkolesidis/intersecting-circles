@@ -8,19 +8,25 @@ let totalTime = 2000;
 let x1 = 300;
 let y1 = 300;
 let r1;
-let speedX1 = 2;
-let speedY1 = 2;
+let speedX1;
+let speedY1;
 let x2 = 500;
 let y2 = 300;
 let r2 = 100;
-let speedX2 = -2;
-let speedY2 = -4;
+let speedX2;
+let speedY2;
 
 function setup() {
   createCanvas(
     windowWidth - (windowWidth * 0.4) / 100,
     windowHeight - (windowHeight * 0.4) / 100
   );
+  
+  speedX1 = random(6)
+  speedY1 = random(6)
+  speedX2 = - random(6)
+  speedY2 = - random(6)
+
 
   savedTime = millis();
   background(random(155, 255), random(155, 255), random(155, 255));
