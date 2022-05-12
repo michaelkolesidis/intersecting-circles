@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2022 Michael Kolesidis
  * MIT License
- * 
+ *
  */
 
 let totalTime = 2000;
@@ -21,21 +21,24 @@ function setup() {
     windowWidth - (windowWidth * 0.4) / 100,
     windowHeight - (windowHeight * 0.4) / 100
   );
-  
-  speedX1 = random(6)
-  speedY1 = random(6)
-  speedX2 = - random(6)
-  speedY2 = - random(6)
 
+  speedX1 = random(6);
+  speedY1 = random(6);
+  speedX2 = -random(6);
+  speedY2 = -random(6);
 
   savedTime = millis();
   background(random(155, 255), random(155, 255), random(155, 255));
 }
 
 function draw() {
-
-  r1 = width / 6;
-  r2 = width / 6;
+  if (width <= height) {
+    r1 = width / 6;
+    r2 = width / 6;
+  } else {
+    r1 = height / 6;
+    r2 = height / 6;
+  }
 
   passedTime = millis() - savedTime;
   if (passedTime > totalTime) {
@@ -72,7 +75,6 @@ function draw() {
   ellipse(x1, y1, 2 * r1, 2 * r1);
   ellipse(x2, y2, 2 * r2, 2 * r2);
 }
-
 
 function windowResized() {
   resizeCanvas(
