@@ -17,10 +17,7 @@ let speedX2;
 let speedY2;
 
 function setup() {
-  createCanvas(
-    windowWidth - (windowWidth * 0.4) / 100,
-    windowHeight - (windowHeight * 0.4) / 100
-  );
+  createCanvas(windowWidth, windowHeight);
 
   speedX1 = random(6);
   speedY1 = random(6);
@@ -77,8 +74,5 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(
-    windowWidth - (windowWidth * 0.4) / 100,
-    windowHeight - (windowHeight * 0.4) / 100
-  );
+  resizeCanvas(windowWidth ,windowHeight);
 }
