@@ -30,6 +30,8 @@
 
 <p>Two circles move with random speeds and change colors when intersecting. THe backround is refreshed every few seconds.</p>
 
+<p>Double-click anywhere to enter fullscreen mode, double-click again (or press ESC) to leave fullscreen mode.</p>
+
 
 
 ## Screenshots
