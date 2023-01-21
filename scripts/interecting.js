@@ -1,13 +1,14 @@
 /*
- * Copyright (c) 2022 Michael Kolesidis
- * MIT License
+ * Copyright (c) 2023 Michael Kolesidis
+ * GNU Affero General Public License v3.0
+ * https://www.gnu.org/licenses/gpl-3.0.html
  *
  */
 
 let totalTime = 2000;
 let x1 = 300;
 let y1 = 300;
-let r1;
+let r1 = 100;
 let speedX1;
 let speedY1;
 let x2 = 500;
@@ -15,26 +16,28 @@ let y2 = 300;
 let r2 = 100;
 let speedX2;
 let speedY2;
+let speedFactor = 1.5;
 
+// Setup
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth, windowHeight);
 
-  speedX1 = random(6);
-  speedY1 = random(6);
-  speedX2 = -random(6);
-  speedY2 = -random(6);
+  speedX1 = random(6) * speedFactor * noise(frameCount);
+  speedY1 = random(6) * speedFactor * noise(frameCount);
+  speedX2 = -random(6) * speedFactor * noise(frameCount);
+  speedY2 = -random(6) * speedFactor * noise(frameCount);
 
   savedTime = millis();
   background(random(155, 255), random(155, 255), random(155, 255));
 }
-
+// Draw
 function draw() {
   if (width <= height) {
-    r1 = width / 6;
-    r2 = width / 6;
+    r1 = width / 8;
+    r2 = width / 8;
   } else {
-    r1 = height / 6;
-    r2 = height / 6;
+    r1 = height / 8;
+    r2 = height / 8;
   }
 
   passedTime = millis() - savedTime;
@@ -73,11 +76,12 @@ function draw() {
   ellipse(x2, y2, 2 * r2, 2 * r2);
 }
 
+// Resize
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-// Fullscreen mode
+// Fullscreen
 window.addEventListener("dblclick", () => {
   const fullscreenElement =
     document.fullscreenElement || document.webkitFullscreenElement;
