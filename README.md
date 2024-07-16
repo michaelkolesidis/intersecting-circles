@@ -2,15 +2,10 @@
   <img src="./assets/intersecting-circles.gif" width="300px">
   <h1>intersecting circles</h1>
   
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/c1fe4a49-4759-4c77-b7a9-e2ac7485309b/deploy-status)](https://app.netlify.com/sites/intersecting-circles/deploys)
-
   <h4>colorful explosions occur when two circles are interescting.</h4>
 
-  <h3><a href="https://intersecting-circles.netlify.app/">Visit</a></h3>
 </div>
   
-  
-
 ## Technologies Used
 
 <a href="https://p5js.org/"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/p5js/p5js.svg" height="50px"/></a>
